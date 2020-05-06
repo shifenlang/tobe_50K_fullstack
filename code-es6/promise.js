@@ -90,6 +90,7 @@ if (this.status == 'pending') {
 }
 return promise2
 }
+// 递归判断下一个then接受的值的情况  分为 函数 promise 或者是一般值的情况
 function resolvePromise(p2, x, resolve, reject) {
 if (p2 === x && x != undefined) {
   reject(new TypeError('类型错误'))
